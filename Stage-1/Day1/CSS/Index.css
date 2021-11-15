@@ -1,0 +1,102 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family:Arial, Helvetica, sans-serif;
+   
+    
+    
+}
+
+/* Header And Footer CSS */
+.Header{
+    position: sticky;
+    top: 0;
+    text-align: center;
+    width: 100vw;
+    height: 7vh;
+    background-color: #282A35 ;
+    color: white;
+}
+
+.Footer{
+    position: sticky;
+    text-align: center;
+    color: white;
+    width: 100vw;
+    bottom: 0;
+    height: 7vh;
+    background-color: #282A35;
+}
+
+/* Fonts CSS for Header and Footer */
+
+.HF_Font{
+    font-size: 200%;
+    font-weight: bold;
+    margin: auto;}
+  
+
+
+/* Middle Content CSS */
+
+.Middle{
+    font-family:'Brush Script MT', cursive;
+    text-align: center;
+    font-size: 125%;
+    display: flex;
+    height:86vh ; 
+   
+}
+
+.Sider{
+    text-align: justify;
+    padding: 1vh;
+    overflow: auto;
+    height: 100%;
+    width: 20vw;
+    background-color:#666666;
+    color: #f5eceb;
+}
+
+
+.Content{
+    overflow: auto;
+    height: 100%;
+    width: 80vw;
+    COLOR:#282A35;
+   background-color: #CCCCCC;
+  
+} 
+
+
+/* Sider Scrollbar */
+.Siderbar::-webkit-scrollbar {
+    width: 0.3vw;
+    
+}
+.Siderbar::-webkit-scrollbar-thumb{
+    border-radius: 0.1vw;
+    width: 0.1vh;
+    background-color:#CCCCCC;
+    border: 0.1vh solid  #a79f9f;
+}
+.Siderbar::-webkit-scrollbar-track{
+    background-color: #282A35;
+}
+.Siderbar::-webkit-scrollbar-thumb:hover{
+    width: 100px;
+    background-color: #282A35;
+    border: 5px solid #282A35;
+}
+.Siderbar::-webkit-scrollbar-track:hover{
+  display: none;
+}
+
+.Siderbar::-webkit-scrollbar:hover{
+    display: none;
+}
+
+
+
+
+

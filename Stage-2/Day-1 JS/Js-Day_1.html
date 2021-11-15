@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Script</title>
+</head>
+
+<body>
+
+    <h1 >Hello</h1>
+   <div style=" display: inline-block;background-color: antiquewhite;">
+    <a id="links" href="https://hops.healthcare/"><h1>hops</h1> </a>
+    <button onclick="Change_link()">Change Link</button>
+ 
+   </div>
+
+   <br>
+   <br>
+    <label for="">Select your star patern</label>
+
+    <select class="h1" name="Select Your Star Pattern" id="Sel_one">
+        <option value="Left" id="Left" selected>Left</option>
+        <option value="Right" id="Right">Right</option>
+        <option value="Center" id="Center">Center</option>
+        <option value="Diamond" id="Diamond">Diamond</option>
+    </select>
+    <br>
+    <label>Enter value to print line of * pyramid</label>
+    <input type="number" name="" id="start_val">
+
+    <button onclick="printStar()">Submit</button>
+
+    <div  style=" background: wheat; min-height: 40vh;width: 40vw; display: flex;">
+    
+            <h3 class="h23"></h3> &nbsp;&nbsp;
+            <h3 class="h24"></h3> &nbsp;&nbsp;
+            <h3 class="h25"></h3> &nbsp;&nbsp;
+            <h3 class="h26"></h3> &nbsp;&nbsp;
+     
+    </div>
+
+    <!-- <label> First Name :</label> -->
+    <!-- <input type="text" placeholder="First Name" name="name" id="first_name" class="f_name"  >
+        alert(document.getElementsByClassName("f_name").value);
+   <button  onclick="myFunction()">Submit</button> -->
+
+
+    <!-- <label>T1 =</label>
+        <input type="text"  name="t1" id="t1">
+       <button onclick="Swap()">Swap Vlues</button> 
+      <button onclick="myFunction()">></button>
+        <button onclick="Swap()">back</button> 
+
+         <button onclick="Swap('Forward')"> &#8920; </button>
+      <button onclick="Swap('Backward')">></button>
+        <label>T2 =</label>
+        <input type="text"  name="t2" id="t2"> -->
+
+
+
+
+    <script>
+
+
+Change_link =()=>{
+    let Z = "https://hops.healthcare/";
+    if( document.getElementById("links").href == Z ){
+        document.getElementById("links").href = "https://www.google.com";
+    document.getElementsByTagName("h1")[1].innerHTML = "Google";
+    document.getElementById("links").target = "_blank";
+    }
+    else{
+        document.getElementById("links").href = "https://hops.healthcare/";
+    document.getElementsByTagName("h1")[1].innerHTML = "Hops";
+    document.getElementById("links").target = "_blank";
+    }
+}
+        //  console.log(document.getElementsByClassName("h1")[0])
+        //  console.log(document.getElementsByTagName("select"))
+
+        // document.getElementsByClassName("h1")[0].innerHTML = " Ajay"
+        // document.getElementById("Left").innerHTML = " LEFTY"
+
+
+        document.getElementsByName
+
+
+        // STAR Printing *********************************************
+
+        function printStar() {
+            let A = document.getElementById("start_val").value;
+            let i;
+            let j;
+            let k;
+
+            if (document.getElementById("Sel_one").value == "Left" && A != " ") {
+                console.log(document.getElementsByClassName("h23")[0].innerHTML);  
+                for (i = A; i >= 0; i--) {
+                    for (j = 1; j <= i; j++) {
+                        // document.getElementById("result").innerHTML = "<h1>*</h1>";
+                        //document.getElementById("result").setAttribute('result', '<h1>*</h1>');
+                        // document.getElementsById('result').value = "*";
+                           
+                        document.getElementsByClassName("h23")[0].innerHTML = document.getElementsByClassName("h23")[0].innerHTML  + "*";
+                        
+                    }
+                    document.getElementsByClassName("h23")[0].innerHTML = document.getElementsByClassName("h23")[0].innerHTML   + "<br>";
+                }
+            }
+
+            else if (document.getElementById("Sel_one").value == "Right" && A != " ") {
+                for (i = 1; i <= A; i++) {
+                    for (j = 1; j <= i; j++) {
+                        document.getElementsByClassName("h24")[0].innerHTML = document.getElementsByClassName("h24")[0].innerHTML  + "*";
+                    }
+                    document.getElementsByClassName("h24")[0].innerHTML = document.getElementsByClassName("h24")[0].innerHTML   + "<br>";
+                }
+            }
+            else if (document.getElementById("Sel_one").value == "Center" && A != " ") {
+                for (i = 1; i <= A; i++) {
+
+                    document.getElementsByClassName("h25")[0].innerHTML = document.getElementsByClassName("h25")[0].innerHTML   + "&nbsp";
+
+                    for (j = 1; j <= A - i; j++) {
+                        document.getElementsByClassName("h25")[0].innerHTML = document.getElementsByClassName("h25")[0].innerHTML   + "&nbsp";
+                    }
+
+                    for (k = 1; k <= i; k++) {
+                        document.getElementsByClassName("h25")[0].innerHTML = document.getElementsByClassName("h25")[0].innerHTML  + "*";
+                        
+                    }
+
+                    document.getElementsByClassName("h25")[0].innerHTML = document.getElementsByClassName("h25")[0].innerHTML   + "<br>";
+                }
+            }
+
+            else if (document.getElementById("Sel_one").value == "Diamond" && A != " ") {
+                for (i = 1; i <= A; i++) {
+
+                    document.getElementsByClassName("h26")[0].innerHTML = document.getElementsByClassName("h26")[0].innerHTML   + "&nbsp&nbsp&nbsp";
+
+                    for (j = 1; j <= A - i; j++) {
+                        document.getElementsByClassName("h26")[0].innerHTML = document.getElementsByClassName("h26")[0].innerHTML   + "&nbsp";
+                    }
+
+                    for (k = 1; k <= i; k++) {
+                        document.getElementsByClassName("h26")[0].innerHTML = document.getElementsByClassName("h26")[0].innerHTML  + "*";
+                    }
+
+                    document.getElementsByClassName("h26")[0].innerHTML = document.getElementsByClassName("h26")[0].innerHTML   + "<br>";
+                }
+
+                for (i = 1; i <= A; i++) {
+
+                    document.getElementsByClassName("h26")[0].innerHTML = document.getElementsByClassName("h26")[0].innerHTML   + "&nbsp&nbsp&nbsp";
+
+
+                    for (j = 1; j <= i; j++) {
+                        document.getElementsByClassName("h26")[0].innerHTML = document.getElementsByClassName("h26")[0].innerHTML   + "&nbsp";
+                    }
+
+                    for (k = A - i; k >= 1; k--) {
+                        document.getElementsByClassName("h26")[0].innerHTML = document.getElementsByClassName("h26")[0].innerHTML  + "*";
+                    }
+
+
+                    document.getElementsByClassName("h26")[0].innerHTML = document.getElementsByClassName("h26")[0].innerHTML   + "<br>";
+                }
+
+            }
+            else {
+                alert("Please Enter value ");
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+        }
+
+
+
+
+// Swap by TWO function     *******************************************************
+
+        // function myFunction() {
+        //     document.getElementById("t2").value  = document.getElementById("t1").value;
+        //     document.getElementById("t1").value = "";
+
+
+        //     //console.log(document.getElementById("t2").value);
+
+        // }
+
+
+        // function Swap() {
+
+
+        //     let B = document.getElementById("t2").value;
+
+        //     document.getElementById("t1").value = B;
+
+
+        //     console.log(document.getElementById("t1").value);
+
+        //     //   var C =t1;
+        //     //    var A =B;
+        //     //    var B = C ;
+
+        // }
+
+        // Swap by Single function     *******************************************************
+
+        // function Swap(){
+
+        //     let A = document.getElementById("t1").value;
+        //     let B = document.getElementById("t2").value;
+
+        //     document.getElementById("t2").value =A;
+        //     document.getElementById("t1").value =B;
+        // }
+
+
+
+        // Swap by IF - ELSE   *******************************************************
+
+
+
+        // function Swap(){
+
+        //     let A = document.getElementById("t1").value;
+        //     let B = document.getElementById("t2").value;
+        //     if( A != '' && B != ''){
+        //         document.getElementById("t2").value =A;
+        //     document.getElementById("t1").value =B;
+        //     }
+        //     else{
+        //         alert("Please Put value")
+        //     }
+
+
+        // }
+
+
+          // Swap by PARAMETER & IF - ELSE   *******************************************************
+
+
+
+        // function Swap(Forward){
+
+        //     let A = document.getElementById("t1").value;
+        //     let B = document.getElementById("t2").value;
+        //     if( Forward == "Forward"){
+        //         document.getElementById("t2").value =A;
+        //         document.getElementById("t1").value = "";
+        //     }
+        //  else{
+
+        //     document.getElementById("t1").value =B;
+        //         document.getElementById("t2").value ="";
+
+        //     }
+
+
+        // }
+
+
+    </script>
+</body>
+
+</html>

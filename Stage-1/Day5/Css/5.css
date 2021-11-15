@@ -1,0 +1,115 @@
+body{
+margin:0;
+padding:0;
+}
+
+
+
+/*Flex PARENT Properties*/
+
+.container{
+height:544px;
+width:100%;
+border: 2px solid black;
+display:flex;
+
+
+/*FLEX DIRECTION   (By default its row)*/
+//flex-direction:row (By default its row);
+//flex-direction:column;
+//flex-direction:row-reverse;
+//
+
+/*FLEX WRAP (By default its noWrap)*/
+/*
+flex-wrap:wrap;
+flex-wrap:wrap-reverse;
+flex-wrap:nowrap;(By default its no-Wrap)*/
+
+/* FLEX JUSTIFY-CONTENT  (its align MAIN Axis)*/
+/*justify-content:center;
+justify-content:space-between; (put space equaly EXCEPT START & END)
+justify-content:space-evenly;(put Space equaly INCLUDE START & END)
+justify-content:space-around;(put space equaly both LEFT & RIGHT side of child)
+justify-content:safe center;
+justify-content:UN 0safe center;*/
+
+/*FLEX ALIGN-ITEMS (align cross-axis)*/
+/*align-items:center;
+*/
+align-items:flex-end;
+align-items:flex-start;
+align-items:flex-stretch;
+*/
+}
+
+.item{
+width:200px;
+height:200px;
+background-color:tomato;
+border:2px solid green;
+margin:10px;
+padding:3px;
+}
+
+
+/*FLEX CHILD PROPERTIES*/
+/*
+ORDER (if order-value is HIGH its shows LAST,if order-value is LOW than its shows FIRST)
+
+FLEX-GROW ( its expand automatically as per the space)
+
+FLEX-SHRINK(its does not work in WRAP is on) ( its shrink or COLLAPSE automatically as per the space)
+
+FLEX-BASIS (To change default size of element)
+(when flex-direction is set to ROW than it will control WIDTH)
+(when flex-direction is set to COLUMN than it will control WIDTH)
+
+ALIGN-SELF()
+*/
+
+#item-1{
+/*order:-2;
+max-width:300px;
+flex-grow:3;*/
+
+}
+
+#item-2{
+/*flex-grow:3; 
+flex-shrink:3;*/
+
+/*flex-basis:100%;*/                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+}
+
+#item-3{
+/*order:20;
+flex-shrink:4;*/
+
+}
+
+#item-4{
+ 
+
+/*align-self:flex-end;(align-self:end; also working)
+ align-self:flex-start;(not working)
+align-self:center;
+*/;
+}
+
+#item-5{
+
+}
+
+#item-6{
+
+}
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,108 @@
+body{
+margin:0;
+padding:0;
+//user-select:none;
+druggable:true;
+}
+header , footer{
+font-weight:bold;
+font-size:2em;
+height:7vh;
+text-align:center;
+background-color:#282A35;
+
+//background-image:linear-gradient(#282A35 ,rgb(231,233,235));
+color:rgb(215,218,221);
+}
+
+footer{
+background-image:linear-gradient(rgb(231,233,235),#282A35 );
+color:#282A35;
+}
+
+article{
+height:86vh;
+background:rgb(231,233,235);
+
+}
+tr{
+border:1px solid blue;
+}
+
+fieldset{
+width:50px;
+}
+legend{
+color:rgb(231,233,235);
+font-weight:bold;
+font-size:2rem;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button{
+display:none;
+}
+
+td>label{
+font-weight:bold
+}
+
+#canva_square{
+border:1px solid #000000;
+
+}
+
+#canva_circle{
+width:200px;
+height:200px;
+border-radius:100px;
+border:1px solid black;
+
+}
+#span_line{
+border:1px solid blue;
+}
+#canva_triangle{
+//border-top:200px solid yellow;
+border-left:200px solid transparent;
+border-right:200px solid transparent;
+border-bottom:200px solid black;
+
+
+}
+
+.main_table{
+background-image:linear-gradient(#282A35,rgb(231,233,235) );
+width:100%
+}
+
+
+input {
+
+    border-color:transparent;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*<div id="div_triangle"  >triangle</div>
+
+
+#div_triangle{
+
+border-left:200px solid ;
+border-right:200px solid transparent;
+border-bottom:200px solid red;
+height:0px;
+width:0px;
+
+}*/

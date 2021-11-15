@@ -1,0 +1,61 @@
+
+body{
+	margin: 0 auto;
+	background:#FFFFCC;
+}
+
+.Container{
+background:rgba(0, 128, 0, 0.3);
+border:1px solid black;
+width:1000px;
+height:1000px;
+}
+.Boxes{
+//position:absolute;
+height:2px;
+width:150px;
+//border:1px solid black;
+//background-color:#F8F0E3;
+//margin:4px;
+//display:inline-block;
+
+}
+
+
+
+#b1{
+background:#526053;
+}
+
+#b2{
+background:#465347;
+
+}
+
+#b3{
+background:#3b453b;
+}
+
+#b4{
+
+background: #2f372f;	
+}
+
+#b6{
+background: #232924;
+
+}
+
+#b7{
+background:#171c18;
+
+}
+
+#b8{
+background:#0c0e0c;
+}
+
+#b9{
+
+background:#000000;	
+}

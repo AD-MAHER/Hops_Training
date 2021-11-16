@@ -10,20 +10,22 @@
 
 <body>
 
-    <h1 >Hello</h1>
-   <div style=" display: inline-block;background-color: antiquewhite;">
-    <a id="links" href="https://hops.healthcare/"><h1>hops</h1> </a>
-    <button onclick="Change_link()">Change Link</button>
- 
-   </div>
+    <p id="h21" style="color: red;">Hello</p>
+    <div style=" display: inline-block;background-color: antiquewhite;">
+        <a id="links" href="https://hops.healthcare/">
+            <h2>hops</h2>
+        </a>
+        <button onclick="Change_link()">Change Link</button>
 
-   <br>
-   <br>
+    </div>
+
+    <br>
+    <br>
     <label for="">Select your star patern</label>
 
     <select class="h1" name="Select Your Star Pattern" id="Sel_one">
-        <option value="Left" id="Left" selected>Left</option>
-        <option value="Right" id="Right">Right</option>
+        <option value="Top" id="Top" selected>Top</option>
+        <option value="Bottom" id="Bottom">Bottom</option>
         <option value="Center" id="Center">Center</option>
         <option value="Diamond" id="Diamond">Diamond</option>
     </select>
@@ -33,13 +35,14 @@
 
     <button onclick="printStar()">Submit</button>
 
-    <div  style=" background: wheat; min-height: 40vh;width: 40vw; display: flex;">
-    
-            <h3 class="h23"></h3> &nbsp;&nbsp;
-            <h3 class="h24"></h3> &nbsp;&nbsp;
-            <h3 class="h25"></h3> &nbsp;&nbsp;
-            <h3 class="h26"></h3> &nbsp;&nbsp;
-     
+    <div style=" background: wheat; min-height: 40vh;width: 40vw; display: flex;">
+    Result : <br>
+
+        <h3 class="h24"></h3> &nbsp;&nbsp;
+        <h3 class="h23"></h3> &nbsp;&nbsp;
+        <h3 class="h25"></h3> &nbsp;&nbsp;
+        <h3 class="h26"></h3> &nbsp;&nbsp;
+
     </div>
 
     <!-- <label> First Name :</label> -->
@@ -65,27 +68,52 @@
     <script>
 
 
-Change_link =()=>{
-    let Z = "https://hops.healthcare/";
-    if( document.getElementById("links").href == Z ){
-        document.getElementById("links").href = "https://www.google.com";
-    document.getElementsByTagName("h1")[1].innerHTML = "Google";
-    document.getElementById("links").target = "_blank";
-    }
-    else{
-        document.getElementById("links").href = "https://hops.healthcare/";
-    document.getElementsByTagName("h1")[1].innerHTML = "Hops";
-    document.getElementById("links").target = "_blank";
-    }
-}
+        const X = document.getElementById("h21")
+        x.setAttribute('style', 'font-style : italic');
+
+
+       function Change_link () {
+            let Z = "https://hops.healthcare/";
+            if (document.getElementById("links").href == Z) {
+                document.getElementById("links").href = "https://www.google.com";
+                document.getElementsByTagName("h2")[0].innerHTML = "Google";
+                document.getElementById("links").target = "_blank";
+            }
+            else {
+                document.getElementById("links").href = "https://hops.healthcare/";
+                document.getElementsByTagName("h2")[0].innerHTML = "Hops";
+                document.getElementById("links").target = "_blank";
+            }
+        }
+
+
+
+
+
+
+
+
         //  console.log(document.getElementsByClassName("h1")[0])
         //  console.log(document.getElementsByTagName("select"))
 
-        // document.getElementsByClassName("h1")[0].innerHTML = " Ajay"
+        // console.log(document.getElementsByTagName("h1"));
+
+        //  document.getElementsByClassName("h21")[0].innerHTML = " AMD"
+        //   document.getElementsByClassName("h21")[0].setAttribute('class','h15');
+        //   console.log(document.getElementsByTagName("h1"));
+
+
+        //   console.log(h1.ClassName);
+        //  document.getElementsByClassName("h21")[0].innerHTML = " <h1>AMD</h1>"
+
+        // document.getElementsByClassName("h21")[0].innerText = " <h1>AMD</h1>" (its will print Whole element )
+
+        // document.getElementsByClassName("h21")[0].innerHTML = " AMD"
         // document.getElementById("Left").innerHTML = " LEFTY"
 
+        // console.log(document.getElementsByClassName("h23")[0].innerHTML);  
 
-        document.getElementsByName
+        // document.getElementsByName
 
 
         // STAR Printing *********************************************
@@ -95,79 +123,86 @@ Change_link =()=>{
             let i;
             let j;
             let k;
+            document.getElementsByClassName("h24")[0].innerHTML + "";
+            document.getElementsByClassName("h23")[0].innerHTML + "";
+            document.getElementsByClassName("h25")[0].innerHTML + "";
+            document.getElementsByClassName("h26")[0].innerHTML + "";
+            if (document.getElementById("Sel_one").value == "Top" && A != " ") {
+                for (i = 1; i <= A; i++) {
+                    for (j = 1; j <= i; j++) {
+                        document.getElementsByClassName("h24")[0].innerHTML = document.getElementsByClassName("h24")[0].innerHTML + "*";
+                    }
+                    document.getElementsByClassName("h24")[0].innerHTML = document.getElementsByClassName("h24")[0].innerHTML + "<br>";
+                }
 
-            if (document.getElementById("Sel_one").value == "Left" && A != " ") {
-                console.log(document.getElementsByClassName("h23")[0].innerHTML);  
+            }
+
+            else if (document.getElementById("Sel_one").value == "Bottom" && A != " ") {
+                document.getElementsByClassName("h23")[0].innerHTML = document.getElementsByClassName("h23")[0].innerHTML + "<br>Bottom<br>";
                 for (i = A; i >= 0; i--) {
                     for (j = 1; j <= i; j++) {
                         // document.getElementById("result").innerHTML = "<h1>*</h1>";
                         //document.getElementById("result").setAttribute('result', '<h1>*</h1>');
                         // document.getElementsById('result').value = "*";
-                           
-                        document.getElementsByClassName("h23")[0].innerHTML = document.getElementsByClassName("h23")[0].innerHTML  + "*";
-                        
-                    }
-                    document.getElementsByClassName("h23")[0].innerHTML = document.getElementsByClassName("h23")[0].innerHTML   + "<br>";
-                }
-            }
 
-            else if (document.getElementById("Sel_one").value == "Right" && A != " ") {
-                for (i = 1; i <= A; i++) {
-                    for (j = 1; j <= i; j++) {
-                        document.getElementsByClassName("h24")[0].innerHTML = document.getElementsByClassName("h24")[0].innerHTML  + "*";
+                        document.getElementsByClassName("h23")[0].innerHTML = document.getElementsByClassName("h23")[0].innerHTML + "*";
+
                     }
-                    document.getElementsByClassName("h24")[0].innerHTML = document.getElementsByClassName("h24")[0].innerHTML   + "<br>";
+                    document.getElementsByClassName("h23")[0].innerHTML = document.getElementsByClassName("h23")[0].innerHTML + "<br>";
                 }
+
             }
             else if (document.getElementById("Sel_one").value == "Center" && A != " ") {
+                document.getElementsByClassName("h25")[0].innerHTML = document.getElementsByClassName("h25")[0].innerHTML + "Center <br>";
                 for (i = 1; i <= A; i++) {
 
-                    document.getElementsByClassName("h25")[0].innerHTML = document.getElementsByClassName("h25")[0].innerHTML   + "&nbsp";
+                    document.getElementsByClassName("h25")[0].innerHTML = document.getElementsByClassName("h25")[0].innerHTML + "&nbsp";
 
                     for (j = 1; j <= A - i; j++) {
-                        document.getElementsByClassName("h25")[0].innerHTML = document.getElementsByClassName("h25")[0].innerHTML   + "&nbsp";
+                        document.getElementsByClassName("h25")[0].innerHTML = document.getElementsByClassName("h25")[0].innerHTML + "&nbsp";
                     }
 
                     for (k = 1; k <= i; k++) {
-                        document.getElementsByClassName("h25")[0].innerHTML = document.getElementsByClassName("h25")[0].innerHTML  + "*";
-                        
+                        document.getElementsByClassName("h25")[0].innerHTML = document.getElementsByClassName("h25")[0].innerHTML + "*";
+
                     }
 
-                    document.getElementsByClassName("h25")[0].innerHTML = document.getElementsByClassName("h25")[0].innerHTML   + "<br>";
+                    document.getElementsByClassName("h25")[0].innerHTML = document.getElementsByClassName("h25")[0].innerHTML + "<br>";
                 }
             }
 
             else if (document.getElementById("Sel_one").value == "Diamond" && A != " ") {
+                document.getElementsByClassName("h26")[0].innerHTML = document.getElementsByClassName("h26")[0].innerHTML + "<br>Diamond<br>";
                 for (i = 1; i <= A; i++) {
 
-                    document.getElementsByClassName("h26")[0].innerHTML = document.getElementsByClassName("h26")[0].innerHTML   + "&nbsp&nbsp&nbsp";
+                    document.getElementsByClassName("h26")[0].innerHTML = document.getElementsByClassName("h26")[0].innerHTML + "&nbsp&nbsp&nbsp";
 
                     for (j = 1; j <= A - i; j++) {
-                        document.getElementsByClassName("h26")[0].innerHTML = document.getElementsByClassName("h26")[0].innerHTML   + "&nbsp";
+                        document.getElementsByClassName("h26")[0].innerHTML = document.getElementsByClassName("h26")[0].innerHTML + "&nbsp";
                     }
 
                     for (k = 1; k <= i; k++) {
-                        document.getElementsByClassName("h26")[0].innerHTML = document.getElementsByClassName("h26")[0].innerHTML  + "*";
+                        document.getElementsByClassName("h26")[0].innerHTML = document.getElementsByClassName("h26")[0].innerHTML + "*";
                     }
 
-                    document.getElementsByClassName("h26")[0].innerHTML = document.getElementsByClassName("h26")[0].innerHTML   + "<br>";
+                    document.getElementsByClassName("h26")[0].innerHTML = document.getElementsByClassName("h26")[0].innerHTML + "<br>";
                 }
 
                 for (i = 1; i <= A; i++) {
 
-                    document.getElementsByClassName("h26")[0].innerHTML = document.getElementsByClassName("h26")[0].innerHTML   + "&nbsp&nbsp&nbsp";
+                    document.getElementsByClassName("h26")[0].innerHTML = document.getElementsByClassName("h26")[0].innerHTML + "&nbsp&nbsp&nbsp";
 
 
                     for (j = 1; j <= i; j++) {
-                        document.getElementsByClassName("h26")[0].innerHTML = document.getElementsByClassName("h26")[0].innerHTML   + "&nbsp";
+                        document.getElementsByClassName("h26")[0].innerHTML = document.getElementsByClassName("h26")[0].innerHTML + "&nbsp";
                     }
 
                     for (k = A - i; k >= 1; k--) {
-                        document.getElementsByClassName("h26")[0].innerHTML = document.getElementsByClassName("h26")[0].innerHTML  + "*";
+                        document.getElementsByClassName("h26")[0].innerHTML = document.getElementsByClassName("h26")[0].innerHTML + "*";
                     }
 
 
-                    document.getElementsByClassName("h26")[0].innerHTML = document.getElementsByClassName("h26")[0].innerHTML   + "<br>";
+                    document.getElementsByClassName("h26")[0].innerHTML = document.getElementsByClassName("h26")[0].innerHTML + "<br>";
                 }
 
             }

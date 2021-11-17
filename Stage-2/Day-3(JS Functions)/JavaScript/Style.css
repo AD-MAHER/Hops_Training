@@ -1,0 +1,54 @@
+.clk{
+    /* font-family: 'Kodchasan', sans-serif; */
+
+    font-size: 100px;
+    
+    /* font-family: 'Roboto', sans-serif; */
+    font-family: 'Rubik', sans-serif;
+}
+
+
+
+.traffic{
+    border-radius: 3vh;
+    height: 30vh;
+    width: 7vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    border:5px solid black;
+    margin: 0 45% ;
+    margin-bottom: 50px;
+    font-family: 'Rubik', sans-serif;
+}
+
+
+.light{
+    border:5px solid black;
+      height: 8vh;
+      width: 5vw;
+    border-radius: 50%;
+    background-color: rgb(10, 10, 10);
+}
+
+.red-light{
+      color: red;
+
+    background-color: rgb(182, 3, 3);
+}
+
+.yellow-light{
+
+    background-color: yellow;
+    color: rgb(177, 177, 0);
+}
+
+
+.green-light{
+
+    background-color: green;
+    color: rgb(1, 61, 1);
+
+}

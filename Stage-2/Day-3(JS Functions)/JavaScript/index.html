@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kodchasan:wght@700&family=Roboto&family=Rubik:ital,wght@0,300;0,600;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./Style.css">
+    <title>Day-3</title>
+</head>
+
+<body>
+    
+    <div class="container-fluid " >
+        <div class="row">
+            <div col-12><h1>Cart box</h1></div >
+               <!-- <div class=""> 
+                     <input type="text" id="add_txt" >
+                <button class="btn btn-primary" onclick="Add()">Add</button></div>  -->
+
+
+     </div> 
+        <div class="row" style="height: 40vh;">
+
+
+
+            
+            <div class="col-6 bg-danger text-primary h4">
+                <h4 class="text-warning">List of Items</h4>
+
+
+               
+                <div id="Sel1">
+                    <input type="checkbox" id="Item1" name="Item1" value="Note-4">
+                    <label for="Item1 " >Note-4</label>
+                </div><br>
+                <div id="Sel2">
+                    <input type="checkbox" id="Item2" name="Item2" value="i-phone">
+                    <label for="Item2" >i-phone</label>
+                </div><br>
+
+                <div id="Sel3">
+                    <input type="checkbox" id="Item3" name="Item3" value="Pixel-6">
+                    <label for="Item3" >Pixel-6</label><br>
+                </div><br>
+                <button class="btn btn-primary " value="submit" onclick="Submit()">Add
+                    to cart</button>
+
+
+            </div>
+
+            <div class="col-6 bg-warning">
+                <h4>Your Selected Items</h4>
+                <div class="text-danger h4" id="cart">
+                    <div id="Rem1"></div>
+                    <div id="Rem2"></div>
+                    <div id="Rem3"></div>
+                </div>
+
+
+                <button class="btn btn-primary " value="remove" onclick="Remove()" >Remove from cart</button>
+            </div>
+        </div>
+
+
+        <div class="row" style="background-color: black;">
+            <div class="col-6 justify-content-end ">
+                <small class='text-primary lead clk'>Current Time is :</small>
+            </div>
+            <div class="col-6" >
+               <div class="w-auto ">
+                <p id="clock-data"></p>
+               </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="row bg-success">
+        <div class="col">
+            <h3>Traffic Light</h3>
+            <button class="btn btn-warning " value="Traffic-lights" onclick="Traffic_fun()" >Signal On</button>
+
+            <div class="traffic bg-dark">
+                <div class="light red-light m-1 text-center" id="red">Stop</div>
+                <div class="light yellow-light m-1 text-center" id="yellow">Wait</div>
+                <div class="light green-light m-1 text-center" id="green">Go</div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <script>
+    
+
+  function Traffic_fun(){
+
+    var red = document.getElementById("red");
+    var greeen = document.getElementById("green");
+    var yellow = document.getElementById("yellow")
+
+
+
+    setTimeout(function(){
+        red.style.opacity = 1;
+        yellow.style.opacity = 0.2;
+        greeen.style.opacity = 0.2;
+    },)
+
+    setTimeout(function(){
+        red.style.opacity = 0.2;
+        yellow.style.opacity = 1;
+        greeen.style.opacity = 0.2;
+    },4000)
+
+    setTimeout(function(){
+        red.style.opacity = 0.2;
+        yellow.style.opacity = 0.2;
+        greeen.style.opacity = 1;
+    },8000)
+
+
+
+  }
+
+
+        
+
+
+    </script>
+
+
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+    <script src="./script.js"></script>
+
+</body>
+
+</html>

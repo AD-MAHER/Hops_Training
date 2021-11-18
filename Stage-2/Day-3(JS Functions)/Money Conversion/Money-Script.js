@@ -36,8 +36,10 @@ function hundred() {
     "Hundreed ",
   ];
 
-  var num = 1123576
+  var num = prompt("Enter Number : ")
 //   prompt("Enter Value for convert : ")
+
+console.log(num);
 
   var str1 = "";
   var array = num.toString().split("");

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>J query Tuts</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+    <div style="background-color: aquamarine;">
+        <h5 id="second">clcik to hide below content</h5> 
+        <p>this is my body</p>
+        <p id="body-id">this is my body ID</p>
+        <p class="body-class">this is my body class</p>
+    </div>
+
+    
+    
+
+    <div>
+        <button id="btn">See </button>
+    </div>
+    <div id="Animated" style="background-color: tomato;">
+        <h6>Animated</h6>
+        <p id="para1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, perspiciatis!</p>
+        <p id="para2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, perspiciatis!</p>
+        <p id="para3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, perspiciatis!</p>
+
+
+    </div>
+
+
+
+
+
+
+    <div class="atri_change" style="background-color: yellowgreen;">
+
+<div>Hops</div>
+<span id="child" >Healthcare</span>
+    </div>
+
+
+
+    <div id="append_prepend">
+<!-- before -->
+        <ul id="list">
+            <!-- prepend -->
+            <li>red</li>
+            <li>green</li>
+            <li>black</li>
+            <!-- append -->
+        </ul>
+<!-- after -->
+
+    </div>
+
+    <div id="test_outer" style="background-color: rgb(237, 255, 71);">
+        <!-- <a href="https//www.google.com" id="btn">event</a> -->
+        <p id="parax">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, perspiciatis!</p>
+        <div style="background-color: rgb(114, 255, 71); margin: 50px;" id="test_inner">Cancle</div>
+    </div>
+
+
+    <script>
+
+
+
+
+
+        $(document).ready(function () {
+
+
+
+            $("#test_inner").on("click",function(event){
+                event.stopPropagation();
+                console.log("inner div is clicked")
+            })
+
+            $("#test_outer").on("click",function(event){
+                console.log("outer div is clicked")
+            })
+            console.log($('p').show())
+
+
+            //1. element Selector
+            $('p').click(function () {
+                console.log('you clicked on p')
+                $(this).hide();
+
+            })
+
+
+            $('#body-id').hide();
+            $('.body-class').hide();
+
+
+
+            //2. ID Selector
+            $('#second').hover(
+                function () {
+                    $('#body-id').hide(1500);
+
+
+                    $('#body-id').fadeIn(1500);
+                    $('.body-class').fadeIn(2000)
+
+                },
+                function () {
+                    $('#body-id').hide(1500);
+                    $('.body-class').hide(2000)
+
+
+
+                },
+
+            )
+
+
+            $('#body-id').css("color", "rgb(170, 255, 0)");
+            $('.body-class').hide(2000)
+
+        
+            $('#btn').click(function(event){
+                event.stopPropagation
+                $("#Animated").animate({
+                    height : '500px',
+                    width:'100px'
+                }, 2000),
+                $('#second').stop();
+            });
+
+
+
+            let txt1;
+
+            $("#btn").click(function(){
+                txt1 = $("#para1").text();
+               
+            })
+     $("#btn").click(function(){
+                    var txt2 = $("#Animated").html("<h1>Hello World</h1>");
+                    // alert( txt1 + txt2);
+                })
+           
+
+
+
+            $("#btn").click(function(){
+                $("span").attr({
+                    "class" : "New_Class"
+                })
+            })
+
+            $('#append_prepend').css("background-color", "rgb(170, 255, 0)")
+            $('#list').before("<p>before Added</p>")
+            $("#list").append("<li>append Blue</li>")
+            $('#list').prepend("<li>prepend</li>")
+            $('#list').after("<p>After Added</p>")
+            
+
+
+            // $('#list').empty()   // For removechild(text-only)
+            // $('#list').remove()   // For deletechild(text with html)
+
+
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+        })
+
+
+
+
+    </script>
+
+
+    <!-- There Are mainly Three types of selections on jquery -->
+
+    <!-- 
+    1. Element Selector
+    2. Id Selector
+    3. Class Selector
+    4. Other Selectors ('*').clicks()
+ -->
+
+</body>
+
+</html>

@@ -11,45 +11,54 @@
 
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Kodchasan:wght@700&family=Roboto&family=Rubik:ital,wght@0,300;0,600;1,500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kodchasan:wght@700&family=Roboto&family=Rubik:ital,wght@0,300;0,600;1,500&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="./Style.css">
     <title>Day-3</title>
 </head>
 
 <body>
-    
-    <div class="container-fluid " >
+
+    <div class="container-fluid ">
         <div class="row">
-            <div col-12><h1>Cart box</h1></div >
-               <!-- <div class=""> 
-                     <input type="text" id="add_txt" >
-                <button class="btn btn-primary" onclick="Add()">Add</button></div>  -->
+            <div col-12>
+                <h1>Cart box</h1>
+            </div>
 
 
-     </div> 
+        </div>
         <div class="row" style="height: 40vh;">
 
 
 
-            
+
             <div class="col-6 bg-danger text-primary h4">
                 <h4 class="text-warning">List of Items</h4>
 
 
-               
+
                 <div id="Sel1">
                     <input type="checkbox" id="Item1" name="Item1" value="Note-4">
-                    <label for="Item1 " >Note-4</label>
+                    <label for="Item1 ">Note-4</label>
                 </div><br>
                 <div id="Sel2">
                     <input type="checkbox" id="Item2" name="Item2" value="i-phone">
-                    <label for="Item2" >i-phone</label>
+                    <label for="Item2">i-phone</label>
                 </div><br>
 
                 <div id="Sel3">
                     <input type="checkbox" id="Item3" name="Item3" value="Pixel-6">
-                    <label for="Item3" >Pixel-6</label><br>
+                    <label for="Item3">Pixel-6</label><br>
+                </div><br>
+
+                <div id="Sel4">
+
+                </div><br>
+
+                <div id="Sel5">
+
                 </div><br>
                 <button class="btn btn-primary " value="submit" onclick="Submit()">Add
                     to cart</button>
@@ -66,7 +75,7 @@
                 </div>
 
 
-                <button class="btn btn-primary " value="remove" onclick="Remove()" >Remove from cart</button>
+                <button class="btn btn-primary " value="remove" onclick="Remove()">Remove from cart</button>
             </div>
         </div>
 
@@ -75,10 +84,10 @@
             <div class="col-6 justify-content-end ">
                 <small class='text-primary lead clk'>Current Time is :</small>
             </div>
-            <div class="col-6" >
-               <div class="w-auto ">
-                <p id="clock-data"></p>
-               </div>
+            <div class="col-6">
+                <div class="w-auto ">
+                    <p id="clock-data"></p>
+                </div>
             </div>
         </div>
     </div>
@@ -89,12 +98,17 @@
     <div class="row bg-success">
         <div class="col">
             <h3>Traffic Light</h3>
-            <button class="btn btn-warning " value="Traffic-lights" onclick="Traffic_fun()" >Signal On</button>
+
+            <button class="btn btn-warning " value="Traffic-lights" onclick="Traffic_fun()">Signal On</button>
 
             <div class="traffic bg-dark">
-                <div class="light red-light m-1 text-center" id="red">Stop</div>
-                <div class="light yellow-light m-1 text-center" id="yellow">Wait</div>
-                <div class="light green-light m-1 text-center" id="green">Go</div>
+                <div class="light red-light m-1 text-center" id="red">S</div>
+                <div class="light yellow-light m-1 text-center" id="yellow">W</div>
+                <div class="light green-light m-1 text-center" id="green">G</div>
+
+                <div class="light  m-1 text-center cnt-val " id="text-primary ">
+                    <p class="font-weight-bold h3 align-self-center" id="count_value"></p>
+                </div>
             </div>
         </div>
     </div>
@@ -102,51 +116,109 @@
 
 
 
+    <!-- <div>
+        <input type="text" id="add_txt">
+        <button class="btn btn-primary" onclick="btnClick()">Add</button>
+    </div> -->
 
 
 
     <script>
-    
 
-  function Traffic_fun(){
+        // const startEvent = new Event("start");
+        // console.log('startEvent', startEvent);
+        // document.addEventListener("start", (data) => {
+        //     console.log("The start event was triggered", data);
+        // });
 
-    var red = document.getElementById("red");
-    var greeen = document.getElementById("green");
-    var yellow = document.getElementById("yellow")
+        // function btnClick() {
+        //     document.dispatchEvent(startEvent, {data:1});
 
-
-
-    setTimeout(function(){
-        red.style.opacity = 1;
-        yellow.style.opacity = 0.2;
-        greeen.style.opacity = 0.2;
-    },)
-
-    setTimeout(function(){
-        red.style.opacity = 0.2;
-        yellow.style.opacity = 1;
-        greeen.style.opacity = 0.2;
-    },4000)
-
-    setTimeout(function(){
-        red.style.opacity = 0.2;
-        yellow.style.opacity = 0.2;
-        greeen.style.opacity = 1;
-    },8000)
+        // }
 
 
 
-  }
+        // function Traffic_fun() {
+
+        var red = document.getElementById("red");
+        var greeen = document.getElementById("green");
+        var yellow = document.getElementById("yellow");
+        // var cowndown = 0;
+        var count1 = 0;
 
 
-        
+
+
+        setTimeout(function () {
+
+            count1 = 31;
+            red.style.opacity = 0.2;
+            yellow.style.opacity = 0.2;
+            greeen.style.opacity = 1;
+            // document.getElementsByClassName("cnt-val").innerHTML
+            $(".cnt-val").css("color", "	#228B22")
+
+        })
+
+        setTimeout(function () {
+            count1 = 4;
+
+            red.style.opacity = 0.2;
+            yellow.style.opacity = 1;
+            greeen.style.opacity = 0.2;
+
+            $(".cnt-val").css("color", "yellow")
+
+        }, 30000)
+
+        setTimeout(function () {
+            count1 = 60;
+
+            red.style.opacity = 1;
+            yellow.style.opacity = 0.2;
+            greeen.style.opacity = 0.2;
+            $(".cnt-val").css("color", "red")
+
+        }, 34000)
+
+
+
+
+        function count_fun() {
+
+            if (count1 > 0) {
+                count1--;
+                document.getElementById("count_value").innerHTML = count1;
+                return count1
+
+            }
+
+        }
+
+
+        setInterval(() => {
+            count_fun();
+        }, 1000);
+
+
+
+
+
+
+
+
+
+        // }
+
+
+
 
 
     </script>
 
 
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
-    <script src="./script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+    <!-- <script src="./script.js"></script> -->
 
 </body>
 

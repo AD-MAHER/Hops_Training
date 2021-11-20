@@ -44,6 +44,10 @@
             <header class="col-12 text-center  "
                 style="height: 10vh; background-color: #00112F; border-bottom: 0.5px solid #C4C4C4;">
                 <p class="h3 text-white align-self-center">Jquery & Forms</p>
+                <div class="float-end">
+                    <button class="btn btn-warning" id="sign_up_btn">Sign-Up</button>
+                <button class="btn btn-success" id="log_in_btn">Log-In</button>
+                </div>
             </header>
         </div>
 
@@ -148,8 +152,42 @@
                 </div>
 
 
+
+
+                <div id="form-2" class="main_form w-75">
+                    <form action="">
+                        <fieldset>
+                            <legend class="text-white h3">Log In</legend>
+                            <div class="form-group">
+                                <label>Email</label>
+                                <div>
+                                    <input type="email" id="log_mail" class="form-control">
+                                    <p class="h6 text-danger" id="log_Email"></p>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Password</label>
+                                <div>
+                                    <input type="password" id="log_pswd" class="form-control">
+                                    <p class="h5 text-danger" id="log_pass"></p>
+                                </div>
+                            </div>
+
+                            <div class="form-group justify-content-between">
+                                <button class="btn btn-success mt-3 mt-lg-0 " id="log_in">log in</button>
+                                <button class="btn btn-primary mt-3 mt-lg-0" type="reset" id="reset">Reset</button>
+                            </div>
+
+                        </fieldset>
+                    </form>
+
+                </div>
+
+
             </article>
         </div>
+
 
 
         <div class="row ">
@@ -168,10 +206,141 @@
 
         $(document).ready(function () {
 
+            $("#form-1").hide()
+            $("#form-2").hide()
+            $('#sign_up_btn').click(function () {
+                $("#form-1").toggle(1000)
+                $("#form-2").hide(1000)
+                $('#sign_up_btn').hide(500)
+                $('#log_in_btn').show(500)
+            })
 
-            $("#date_picker").datepicker(
 
-            );
+
+            $('#log_in_btn').click(function () {
+                $("#form-2").toggle(1000)
+              $("#form-1").hide(1000)
+              $('#log_in_btn').hide(500)
+              $('#sign_up_btn').show(500)
+
+             
+            })
+
+
+
+
+        
+
+        $("#log_in").click(function(){
+            login_mail()
+            login_password()
+            logged_in()
+
+        })  
+        
+        
+
+var logged_pswd = false
+var logged_mail = false
+
+        
+
+function login_mail() {
+     
+     var log_in_mail = $("#log_mail").val();
+    var  mail_compare =  localStorage.getItem("e-Mail")
+    console.log(mail_compare)
+    
+     if (mail_compare != log_in_mail ) {
+         $("#log_Email").show();
+         $("#log_Email").text("Please Enter Valid Email Address")
+         $("#log_mail").css("border", "3px solid red")
+         logged_mail = false
+
+
+     }
+
+
+
+     else {
+         $("#log_Email").hide();
+         $("#log_Email").text("")
+         $("#log_mail").css("border", "none")
+         logged_mail = true
+     }
+
+ };
+
+
+
+            function login_password() {
+     
+                var log_Password = $("#log_pswd").val();
+               var  pswd_compare =  localStorage.getItem("Password")
+                 console.log(pswd_compare)
+               
+                if (log_Password != pswd_compare) {
+                    $("#log_pass").show();
+                    $("#log_pass").text("Please Enter Valid Password")
+                    $("#log_pswd").css("border", "3px solid red")
+                    
+                    logged_pswd = false
+
+                }
+
+
+
+                else {
+                    $("#log_pass").hide();
+                    $("#log_pass").text("")
+                    $("#log_pswd").css("border", "none")
+               logged_pswd = true
+                }
+
+            };
+
+
+
+
+            function logged_in() {
+
+                if(logged_pswd == true && logged_mail == true){
+                alert("You Have Success Fully Logged in")
+                }
+                else if(logged_pswd == false && logged_mail == true){
+                    alert("Password Does Not Match ")  
+                }
+                else if(logged_mail == false && logged_pswd == true ){
+                    alert("E-Mail Does Not Match ")  
+                }
+                else{
+                    alert("Email & Password are not match")
+                }
+
+
+}   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            $("#date_picker").datepicker();
 
             var error_occur = true;
 
@@ -189,51 +358,57 @@
 
 
 
-
-            // var las_name = $("#last_name ").val();
-            // var u_mail = $("#e_mail ").val();
-            // var contact_num = $("#cont_num ").val();
-            // var u_pwd = $("#pswd ").val();
-            // var c_pwd = $("#confirm_pswd ").val();
-            // var c_name = $("#company_name ").val();
-            // var c_url = $("#company_url ").val();
+            var fir_err = true;
+            var las_err = true;
+            var mail_err = true;
+            var contact_err = true;
+            var pass_err = true;
+            var c_pass_err = true;
+            var cname_err = true;
+            var c_url_err = true;
+            var date_err = true;
 
 
 
             $("#first_name").keyup(function () {
                 username_check();
+                Submit_btn_show()
             });
 
             $("#last_name").keyup(function () {
                 username_lcheck();
+                Submit_btn_show()
             });
 
             $("#e_mail").keyup(function () {
                 user_mail_check();
+                Submit_btn_show()
             });
 
             $("#cont_num").keyup(function () {
 
                 contact_check()
+                Submit_btn_show()
             });
 
             $("#pswd").keyup(function () {
                 validating_password()
-
+                Submit_btn_show()
             });
             $("#confirm_pswd").keyup(function () {
                 validating_c_password()
-
+                Submit_btn_show()
             });
 
             $("#company_name").keyup(function () {
                 validating_company_name()
-
+                Submit_btn_show()
             });
 
             $("#company_url").keyup(function () {
                 validating_company_url()
-              
+                Submit_btn_show()
+
 
             });
 
@@ -244,12 +419,29 @@
 
             });
 
-            // $("#submit").keyup(function(){
-                
-            // })
-            
+            $("#submit").click(function () {
+                get_data()
 
 
+            });
+
+
+
+
+
+            // **************************OnSubmit Send Data**************************
+            function get_data() {
+
+                localStorage.setItem("First_Name", $("#first_name").val())
+                localStorage.setItem("Last_Name", $("#last_name").val())
+                localStorage.setItem("e-Mail", $("#e_mail").val())
+                localStorage.setItem("Contact_Number", $("#cont_num").val())
+                localStorage.setItem("Password", $("#confirm_pswd").val())
+                localStorage.setItem("Company_Name", $("#company_name").val())
+                localStorage.setItem("Company_Url", $("#company_url").val())
+                localStorage.setItem("Submited_Date", $("#date_picker").val())
+                // console.log(localStorage.getItem("First_Name"))
+            }
 
 
 
@@ -264,7 +456,8 @@
                     $("#user_fname").show();
                     $("#user_fname").text("Numbers & Special Char. are not allowed")
                     $("#first_name").css("border", "3px solid red")
-                    error_occur = true;
+                    fir_err = true;
+
 
                 }
 
@@ -272,7 +465,7 @@
                     $("#user_fname").hide();
                     $("#user_fname").text("")
                     $("#first_name").css("border", "none")
-                    error_occur = false;
+                    fir_err = false;
 
                 }
 
@@ -290,7 +483,7 @@
                     $("#user_lname").show();
                     $("#user_lname").text("Numbers & Special Char. are not allowed")
                     $("#last_name").css("border", "3px solid red")
-                    error_occur = true;
+                    las_err = true;
 
 
                 }
@@ -299,7 +492,7 @@
                     $("#user_lname").hide();
                     $("#user_lname").text("")
                     $("#last_name").css("border", "none")
-                    error_occur = false;
+                    las_err = false;
                 }
             }
 
@@ -312,7 +505,8 @@
                     $("#user_mail").show();
                     $("#user_mail").text("Please Enter Valid Mail")
                     $("#e_mail").css("border", "3px solid red")
-                    error_occur = true;
+                    mail_err = true;
+
 
 
                 }
@@ -321,7 +515,7 @@
                     $("#user_mail").hide();
                     $("#user_mail").text("")
                     $("#e_mail").css("border", "none")
-                    error_occur = false;
+                    mail_err = false;
                 }
 
 
@@ -338,7 +532,8 @@
                     $("#user_contact").show();
                     $("#user_contact").text("Please Enter Valid indian Contact Number")
                     $("#cont_num").css("border", "3px solid red")
-                    error_occur = true;
+                    contact_err = true;
+
 
 
                 }
@@ -347,7 +542,7 @@
                     $("#user_contact").hide();
                     $("#user_contact").text("")
                     $("#cont_num").css("border", "none")
-                    error_occur = false;
+                    contact_err = false;
                 }
 
 
@@ -371,7 +566,7 @@
                     $("#user_pass").show();
                     $("#user_pass").text("Please Choose Valid Pass")
                     $("#pswd").css("border", "3px solid red")
-                    error_occur = true;
+                    pass_err = true;
 
 
                 }
@@ -382,7 +577,7 @@
                     $("#user_pass").hide();
                     $("#user_pass").text("")
                     $("#pswd").css("border", "none")
-                    error_occur = false;
+                    pass_err = false;
                 }
 
             };
@@ -398,14 +593,14 @@
                     $("#user_con_pass").show();
                     $("#user_con_pass").text("Password Does not match")
                     $("#confirm_pswd").css("border", "3px solid red")
-                    error_occur = true;
+                    c_pass_err = true;
                 }
 
                 else {
                     $("#user_con_pass").hide();
                     $("#user_con_pass").text("")
                     $("#confirm_pswd").css("border", "none")
-                    error_occur = false;
+                    c_pass_err = false;
                 }
 
             };
@@ -425,7 +620,7 @@
                     $("#user_c_name").show();
                     $("#user_c_name").text("Numbers & Special Char. are not allowed")
                     $("#company_name").css("border", "3px solid red")
-                    error_occur = true;
+                    cname_err = true;
 
 
                 }
@@ -434,7 +629,7 @@
                     $("#user_c_name").hide();
                     $("#user_c_name").text("")
                     $("#company_name").css("border", "none")
-                    error_occur = false;
+                    cname_err = false;
                 }
             };
 
@@ -449,7 +644,8 @@
                     $("#user_c_url").show();
                     $("#user_c_url").text("Please Enter Valid Url")
                     $("#company_url").css("border", "3px solid red")
-                    error_occur = true;
+                    c_url_err = true;
+
 
 
                 }
@@ -458,7 +654,7 @@
                     $("#user_c_url").hide();
                     $("#user_c_url").text("")
                     $("#company_url").css("border", "none")
-                    error_occur = false;
+                    c_url_err = false;
                 }
             };
 
@@ -474,7 +670,7 @@
                     $("#user_date").show();
                     $("#user_date").text("Please Enter Valid Date")
                     $("#date_picker").css("border", "3px solid red")
-                    error_occur = true;
+                    date_err = true;
 
 
                 }
@@ -483,10 +679,9 @@
                     $("#user_date").hide();
                     $("#user_date").text("")
                     $("#date_picker").css("border", "none")
-                    error_occur = false;
+                    date_err = false;
                 }
 
-                console.log(error_occur);
             };
 
 
@@ -496,10 +691,23 @@
 
             function Submit_btn_show() {
 
-                if (error_occur == false) {
+                if (fir_err == false &&
+                    las_err == false &&
+                    mail_err == false &&
+                    contact_err == false &&
+                    pass_err == false &&
+                    c_pass_err == false &&
+                    cname_err == false &&
+                    c_url_err == false &&
+                    date_err == false) {
                     $("#submit").css("opacity", "1");
                     $("#submit").attr("type", "submit")
                     $("#submit").removeAttr("disabled")
+                }
+                else {
+
+                    $("#submit").css("opacity", "0.2")
+                    $("#submit").attr("disabled", "true")
                 }
             }
 

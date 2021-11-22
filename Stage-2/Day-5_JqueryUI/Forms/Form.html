@@ -256,6 +256,7 @@ function login_mail() {
          $("#log_Email").text("Please Enter Valid Email Address")
          $("#log_mail").css("border", "3px solid red")
          logged_mail = false
+         
 
 
      }
@@ -306,15 +307,20 @@ function login_mail() {
 
                 if(logged_pswd == true && logged_mail == true){
                 alert("You Have Success Fully Logged in")
+              
+
                 }
                 else if(logged_pswd == false && logged_mail == true){
                     alert("Password Does Not Match ")  
+                    event.preventDefault();
                 }
                 else if(logged_mail == false && logged_pswd == true ){
                     alert("E-Mail Does Not Match ")  
+                    event.preventDefault();
                 }
                 else{
                     alert("Email & Password are not match")
+                    event.preventDefault();
                 }
 
 

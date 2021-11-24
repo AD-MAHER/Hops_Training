@@ -109,4 +109,40 @@ console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
 // }));
 // console.log(array2.map(num => num+1));
 
-//12.-
+//12.arrayReduce()
+     //to perform action in every items ofan array00000000
+//console.log(array1.reduce((total,value)=>total+value));
+
+//13 some()   // its will check the condition and returns first value only
+               // its will returns BOOLEAN value
+
+        //console.log(array1.some(num => num === 3 )); // output = true
+
+
+
+//14. Every() // its will check the condition with whole array  and returns first value only
+               // its will returns BOOLEAN value
+
+
+// console.log(array1.every(num => num>=0&&num<46)); // output = true
+  
+// console.log(array1.every(num => num>10)); // output = false      
+
+//15.  arrayFrom() // used to separate string
+
+
+// str = "Healthcare"
+//  digit = 1234
+// array3 = ["Ajay","Tejas","Sonu", "Hops",""]
+// console.log(array3);
+// const array4 = Array.from(str)
+// console.log(array4);
+
+
+//16. array.of()  //Its creates array from every argumetns passes into it
+
+// const digit = undefined
+// console.log(digit);
+// console.log(Array.of(digit));
+//output will be : [1, 2, 3, 4, 5]
+

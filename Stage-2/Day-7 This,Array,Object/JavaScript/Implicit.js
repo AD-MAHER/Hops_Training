@@ -15,6 +15,14 @@ const objEmplicit = {
 objEmplicit.myFun(); //here context of myFun() is Obj so, it will return "OBJ" object
 window.myFun(); //here context of window so, it will return window object
 
+
+
+var person = {
+  1 : "Hops person"
+}
+
+console.log(person["1"] );
+
 // function sum(){
 //   var add = 2+2;
 //   console.log("Sum = " + add)

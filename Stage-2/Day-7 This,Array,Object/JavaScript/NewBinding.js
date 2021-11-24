@@ -14,14 +14,20 @@ function amd(name , batch){
     
      
        this.work = function(){
-//  console.log("'.Work Function without Return ' is Worked");
+ console.log("'.Work Function without Return ' is Worked");
+ 
+ 
+//  xyz( )
+//  function xyz( ){
+//   console.log(this);  //its will returns the window object
+//  }
        }
 
 
-       return this
+      //  return this
   }
 
-
+// var xyz = {} its called OBJECT Litterel (BY Default value returns the OBJECT)
 
   function class1(){
 this.x=3

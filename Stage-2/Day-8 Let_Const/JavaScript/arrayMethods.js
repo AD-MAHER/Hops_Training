@@ -110,7 +110,7 @@ console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
 // console.log(array2.map(num => num+1));
 
 //12.arrayReduce()
-     //to perform action in every items ofan array00000000
+     //to perform action in every items ofan array
 //console.log(array1.reduce((total,value)=>total+value));
 
 //13 some()   // its will check the condition and returns first value only

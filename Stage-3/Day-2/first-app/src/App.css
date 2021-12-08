@@ -1,0 +1,48 @@
+body{
+    height: 100vh;
+}
+
+
+header , footer{
+    background-color: cadetblue;
+    height: 7vh;
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+header{
+    position: sticky;
+    width: 100%;
+    top: 0;
+}
+footer{
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+
+.centerContent {
+    display: flex;
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.centerContent>aside{
+    flex-grow: 1;
+    background-color: tomato;
+    height: 100vh;
+}
+
+
+.centerContent>article{
+    background-color: yellowgreen;
+    flex-grow: 3;
+    height: 100vh;
+}
+

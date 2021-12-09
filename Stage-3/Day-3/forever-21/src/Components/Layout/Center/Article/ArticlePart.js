@@ -8,7 +8,10 @@ export default function ArticlePart() {
                {/* <div className=" " > */}
            
            <div className="row" id="product_card">
+           
            <ProductFilter />
+          
+           {/* <CardComponent /> */}
 
             </div>
             

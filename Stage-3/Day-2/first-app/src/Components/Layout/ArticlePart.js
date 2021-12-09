@@ -3,7 +3,7 @@ import LeftSider from "./CenterPart/LeftSider";
 import CenterContent from "./CenterPart/CenterContent";
 
 export default function ArticlePart(props) {
-    
+  
   return (
 
     <div className="centerContent">
@@ -12,3 +12,5 @@ export default function ArticlePart(props) {
     </div>
   );
 }
+
+

@@ -11,7 +11,7 @@ import {
 import CardComponent from "../CardComponent";
 
 let Products_Array = ProductData;
-let filteredDiscount = discountArray;
+let filteredDiscount = discountArray;                                           
 let filteredCatagory = catagoriesArray;
 let filteredSizes = sizesArray;
 let filterdColors = colorsArray;

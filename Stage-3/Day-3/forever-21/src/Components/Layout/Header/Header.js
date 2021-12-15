@@ -37,7 +37,7 @@ export default function Header() {
                         <input type="text" className="headerSearchInput" id="header_searchbar" placeholder="Search Products"/>
                         <div>
                             <img src="https://forever21.imgix.net/img/app/brands/forever21/homepage/mobile/searchIcon.svg"
-                                alt="" className="header_search_img"/>
+                                 className="header_search_img"/>
                         </div>
                     </div>
                 </li>

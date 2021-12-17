@@ -1,0 +1,80 @@
+import React, { Component } from 'react'
+import ProductData from "../../../Data/ProductData.json";
+import {discountArray} from '../../SiderComponents/LeftSideFilter';
+import CardComponent from '../CardComponent';
+
+let  Products_Array = ProductData;
+let filterdDiscount = discountArray ;
+export default class ProductFilter extends Component {
+    constructor(props){
+        super(props);
+        
+        this.state={
+            commonFilter :  Products_Array
+        }
+    
+      }
+   
+     filteredAll = ()=>{
+
+        let newFilter=[]
+        console.log(this.filterdDiscount);
+        newFilter =[]
+        Products_Array.forEach((product)=>{
+            
+                if (filterdDiscount.includes(product.Discounts)) {
+                    newFilter.push(product);
+                
+              }
+        })
+
+        this.setState({
+            commonFilter : newFilter
+           }
+       )
+       
+       if(this.state.commonFilter.length<=0){
+        this.setState({
+            commonFilter :Products_Array
+           }
+       ) 
+       }
+     console.log(">>>>>>>>>>>>>>>>>>>>>",newFilter);
+    }
+    render() {
+        return (
+            <>
+
+         <button className='btn-primary' onClick={this.filteredAll}>Filter Products</button>    
+               {
+         this.state.commonFilter.map((products)=>{
+
+            return(
+            
+                
+                <CardComponent product={products} />
+                  
+            )
+         })
+         }
+        </>
+        )
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -6,7 +6,7 @@ export default function UseEffectComp() {
    const [users , setUsers] = useState([])
                            
     const getUsers = async ()=>{
-        const response = await fetch('https://api.github.com/users');
+        const response = await fetch('https://api.github.com/users?since=135');
         console.log(response);
         setUsers( await response.json());
        
@@ -15,6 +15,7 @@ export default function UseEffectComp() {
 
     useEffect(() => {
    getUsers();
+
     },[])
     return (
         <div className="row justify-content-center">
@@ -30,7 +31,7 @@ export default function UseEffectComp() {
                 )
             })
         }
-           <Button variant='success' onClick={useEffect}>ShowMore</Button>
+           <Button variant='success' onClick={getUsers}>ShowMore</Button>
         </div>
     )
 }

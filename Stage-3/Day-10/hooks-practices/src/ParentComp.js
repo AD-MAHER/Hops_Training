@@ -7,8 +7,10 @@ export const ParentComp = () => {
 
     useEffect(()=>{
         console.log("UseEffect is Called and component is mounted");
-        return ()=> (console.log("<<<<<<<<<<---unmounting--->>>>>>>>>>>"))
-    },[count])
+        return ()=> ( 
+            console.log("<<<<<<<<<<---unmounting--->>>>>>>>>>>")
+             )
+    },[]    )
    
   return (
         <>

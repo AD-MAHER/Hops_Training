@@ -1,0 +1,16 @@
+.App {
+  text-align: center;
+}
+
+.editRowClass {
+  height: 18px;
+  opacity: 0.9;
+}
+.deleteRowClass {
+  height: 15px;
+  opacity: 0.9;
+}
+
+.layoutClass{
+  height: 100vh;
+}

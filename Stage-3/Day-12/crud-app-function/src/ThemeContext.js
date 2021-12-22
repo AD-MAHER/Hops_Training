@@ -5,12 +5,14 @@ export const themes ={
     dark : {
         color : "white",
         background : "black",
-        variant : "dark"
+        variant : "dark",
+        ModalVariant : "darkClass"
     },
     light : {
         color : "black",
         background : "#F2F2F2",
-        variant : "light"
+        variant : "light",
+        ModalVariant :"lightClass"
     }
 }
 

@@ -1,0 +1,265 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  text-align: center;
+}
+
+.container-fluid{
+  margin: 0;
+  padding: 0;
+}
+
+.row{
+  margin: 0;
+  padding: 0;
+}
+
+
+/* Header CSS */
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: black;
+    
+  }  
+
+
+.header_left,
+.header_right {
+  height: 7vh; 
+  background-color: black; 
+ }  
+
+.searchOnMenuWrapper {
+  display: inline-flex;
+  position: relative;
+  height: 35px;
+  margin-right: 20px;
+  width: 140px;
+}
+
+.headerSearchInput {
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  outline: 0;
+  border-bottom: 1px solid rgba(240, 240, 240, 0.6);
+  padding-right: 25px;
+  width: 145px;
+  z-index: 10;
+  font-family: roboto, sans-serif;
+  font-weight: 400;
+}
+
+.header_search_img {
+  height: 23px;
+}
+
+.header_right > ul {
+  margin-top: 15px;
+  list-style-type: none;
+
+}
+header,
+footer {
+  color: white;
+  background-color: black;
+  height: 7vh;
+}
+
+
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+
+/* CENTER CSS */
+
+.centerClass {
+  display: flex;
+  height: 86vh;
+}
+.centerClass > aside {
+   
+
+
+  flex-grow: 2;
+  
+}
+
+.centerClass > article {
+  color: black;
+  flex-grow: 12;
+}
+
+
+/* LEFT SIDE CSS */
+
+#clear_all{
+    border: none;
+    background-color: transparent
+    
+}
+.accordion-header{
+    font-size: 14px !important;
+}
+
+.accordion-header>h6{
+  font-size: 14px !important;
+  margin: 0;
+  padding: 0;
+}
+
+.accordion-button:not(.collapsed) {
+  color: #F2F2F2;
+  background-color: #e7f1ff;
+  box-shadow: inset 0 -1px 0 rgb(0 0 0 / 13%);
+  height: 10px;
+}
+
+.accordion-button {
+  
+  height: 10px;
+}
+
+.accordion-item{
+    border-left: none !important;
+    border-right: none !important;
+    border-radius: 0 !important;
+
+}
+.accordion-body{
+
+    border-left: none;
+    border-right: none;
+    display: flex;
+    flex-direction: column;
+   
+    flex-wrap: wrap;
+
+}
+
+
+/* CARD CSS */
+
+.discount_badge{
+    background-color: red;
+    height: 45px;
+    width: 45px;
+    color: white;
+    border-radius: 25px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    top: -10px;
+    left: -10px;
+ 
+}
+.card{
+    border: 0 !important;
+    background-color: #F2F2F2;
+    }
+    .card>img{
+        border-radius: 0 !important;
+    }
+
+
+@media (min-width: 576px) {
+
+    
+/* Header CSS */
+   .font-14 {
+    font-size: 10px;
+  }
+  .headerSearchInput {
+    padding-right: 2px;
+    width: 125px;
+  }
+  .header_right > ul > li {
+    margin-left: 1vw;
+  } 
+
+
+  
+/* Center CSS */
+
+} 
+
+@media (max-width: 576px) {
+    
+/* Header CSS */
+  .font-14 {
+    font-size: 10px;
+  }
+  .headerSearchInput {
+    padding-right: 2px;
+    width: 125px;
+  }
+  .header_right > ul > li {
+    margin-left: 1vw;
+  }
+
+/* Center CSS */
+.centerClass{
+  margin-top: 10vh !important;
+   }
+}
+
+@media (min-width: 768px) {
+
+    
+/* Header CSS */
+  .header_right > ul > li {
+    margin-left: 1vw;
+  }
+
+  /* Center CSS */
+  .centerClass{
+    margin-top: 0vh !important;
+     }
+}
+
+@media (min-width: 992px) {
+    
+/* Header CSS */
+  .header_right > ul > li {
+    margin-left: 0vw;
+  }
+
+/* Center CSS */
+
+.centerClass{
+  margin-top: 0vh !important;
+   }
+
+}
+
+@media (min-width: 1200px) {
+
+    
+/* Header CSS */
+
+  .header_right > ul > li {
+    margin-left: 2vw;
+  }
+ 
+}
+
+@media (min-width: 1400px) {
+
+    
+/* Header CSS */
+  .header_right > ul > li {
+    margin-left: 2vw;
+  }
+
+}

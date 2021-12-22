@@ -14,3 +14,67 @@
 .layoutClass{
   height: 100vh;
 }
+
+
+.modal{
+  backdrop-filter: blur(1px);
+ }
+
+/* Modal CSS */
+ 
+ .lightClass .modal-content{
+  background-color: WHITE !important;
+ }
+
+ 
+
+
+ .lightClass .modal-header{
+ background-color: #F2F2F2;
+  color: #212529;
+}
+
+.lightClass .modal-body{
+  background-color: #F2F2F2; 
+  color: #343a40 ;
+ 
+}
+
+.lightClass .modal-footer{
+ 
+  background-color: #F2F2F2;
+   color:#212529  ;
+ }
+
+/* Dark Mode Css Modal */
+
+ .darkClass .modal-content{
+  background-color: #212529 !important;
+ }
+
+
+ .darkClass .modal-header{
+ background-color: #212529;
+  color: #F2F2F2;
+  border: none !important;
+}
+
+
+.darkClass .modal-body{
+  background-color: #343a40; 
+  color: #F2F2F2;
+ 
+}
+
+.darkClass .modal-header{
+  border: none !important;
+ 
+}
+.darkClass .modal-footer{
+  border: none !important;
+  background-color: #212529;
+   color: #F2F2F2;
+ }
+
+
+ 

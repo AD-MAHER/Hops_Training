@@ -1,0 +1,5 @@
+a:-webkit-any-link {
+  color: #f2f2f2;
+  cursor: pointer;
+  text-decoration: underline;
+}

@@ -7,7 +7,7 @@ import ThemeContext, {themes}  from './ThemeContext';
 
 function App() {
   
-  const [getTheme , setGetTheme] = useState(themes.light)
+  const [getTheme , setGetTheme] = useState(themes.dark)
   const changeTheme =()=>{
    if (getTheme === themes.light) {
     setGetTheme(

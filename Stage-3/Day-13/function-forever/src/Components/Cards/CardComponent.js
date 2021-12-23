@@ -5,9 +5,9 @@ export default function CardComponent(props) {
 
 let likeIcon = Like
     return (
-        
-<div className=" col-12 col-sm-12 col-md-4 col-ld-3 col-xl-2 content_class mt-3 justify-content-around">
-        <div className="card " >
+        <>
+<div className=" col-12 col-sm-12 col-md-4 col-ld-3 col-xl-2 content_class mt-3 justify-content-around" >
+        <div className="card"  >
        <div className="discount_badge">
        <div>{props.product.Discounts}% </div>
        </div>
@@ -31,7 +31,7 @@ let likeIcon = Like
     </div>
     </div>
                
-
+</>
         
     )
 }

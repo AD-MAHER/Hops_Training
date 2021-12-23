@@ -6,10 +6,8 @@ let catagoriesArray = [];
 let sizesArray = [];
 let colorsArray = [];
 let productTypeArray = [];
-
-   
 const handleChange=(e)=> {
-   console.log(e.target.className);
+   
     if(e.target.className === 'discountChecked'){
         let removeVal =e.target.value;
         if((e.target.checked) === true){
@@ -103,12 +101,13 @@ const handleChange=(e)=> {
           
     }
  
-  }
+  
+}
 
  
- const clearAll = (e)=>{
 
-console.log(e.checked);
+
+const clearAll = (e)=>{
 }
 export {discountArray , catagoriesArray , sizesArray , colorsArray, productTypeArray }
 export default function LeftSideFilter() {
@@ -324,14 +323,6 @@ export default function LeftSideFilter() {
                         </Accordion.Body>
 
                 </Accordion.Item> 
-
-
-
-                      
-
-                  
-                
-
              
             </Accordion> 
         </div>

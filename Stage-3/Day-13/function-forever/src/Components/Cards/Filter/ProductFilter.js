@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState} from "react";
 import ProductData from "../../../Data/ProductData.json";
 import {
   discountArray,
@@ -6,6 +6,7 @@ import {
   sizesArray,
   colorsArray,
   productTypeArray,
+
 
 } from "../../SiderComponents/LeftSideFilter";
 import CardComponent from "../CardComponent";
@@ -16,14 +17,16 @@ let filteredCatagory = catagoriesArray;
 let filteredSizes = sizesArray;
 let filterdColors = colorsArray;
 let filterdProductType = productTypeArray;
-
+let allFilter
+ //let changeData = [ProductData,discountArray,catagoriesArray,sizesArray,colorsArray]
 
 
 
 const  ProductFilter =()=> {
   const[commonFilter , setCommonFilter] = useState(Products_Array)
+  
 
-
+ 
   const filteredAll = () => {
 
     let discountFilter = [];
@@ -32,7 +35,7 @@ const  ProductFilter =()=> {
     let colorsFilter = [];
     let productTypeFilter = [];
 
-    let allFilter = [];
+   allFilter = [];
     allFilter = Products_Array;
 
     discountFilter = [];
@@ -67,7 +70,7 @@ const  ProductFilter =()=> {
         
    
     });
-    // console.log("sizesFilter >>>>>>>>>>>>>>>", sizesFilter);
+    
     if (sizesFilter.length > 0) {
       allFilter = sizesFilter;
     }
@@ -113,17 +116,21 @@ const  ProductFilter =()=> {
   };
 
  
+ 
+  
     return ( 
       <>
-         <button className="btn-primary position-absolute " onClick={filteredAll}>
+         <button className="btn-primary " onClick={filteredAll}>
           Filter Products
         </button>  
         {commonFilter.map((products) => {
-          return <CardComponent product={products} />;
+
+      
+          return <CardComponent product={products}  key={products.key}/>;
         })}
       </>
     );
   
 }
 
-export default ProductFilter
+export default ProductFilter 

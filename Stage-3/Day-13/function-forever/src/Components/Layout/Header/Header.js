@@ -37,7 +37,7 @@ export default function Header() {
                         <input type="text" className="headerSearchInput" id="header_searchbar" placeholder="Search Products"/>
                         <div>
                             <img src="https://forever21.imgix.net/img/app/brands/forever21/homepage/mobile/searchIcon.svg"
-                                 className="header_search_img"/>
+                             alt='Search'    className="header_search_img"/>
                         </div>
                     </div>
                 </li>
@@ -45,14 +45,14 @@ export default function Header() {
                      <svg xmlns="http://www.w3.org/2000/svg" link="http://www.w3.org/1999/xlink" width="25px"
                         height="25px" viewBox="0 0 28 28" version="1.1">
                         <defs></defs>
-                        <g id="Artboard-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <g id="Artboard-2" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
                             <g transform="translate(3.000000, 3.000000)">
-                                <ellipse class="fillColor" fill="#FFFFFF" cx="11" cy="7.98487713" rx="4"
+                                <ellipse className="fillColor" fill="#FFFFFF" cx="11" cy="7.98487713" rx="4"
                                     ry="3.99243856"></ellipse>
-                                <path class="fillColor"
+                                <path className="fillColor"
                                     d="M17.9941283,18.484765 C17.9941283,18.484765 18.4638832,22.2911153 11,22.2911153 C3.53611682,22.2911153 4.00587171,18.484765 4.00587171,18.484765 C4.00587171,15.6426901 7.13757094,13.3081285 11,13.3081285 C14.8624291,13.3081285 17.9941283,15.6426901 17.9941283,18.484765 Z"
-                                    fill="white" fill-rule="nonzero"></path>
-                                <ellipse class="fillStroke" stroke="#FFFFFF" stroke-width="1.5" cx="11" cy="11.3119093"
+                                    fill="white" fillRule="nonzero"></path>
+                                <ellipse className="fillStroke" stroke="#FFFFFF" strokeWidth="1.5" cx="11" cy="11.3119093"
                                     rx="11" ry="10.979206"></ellipse>
                             </g>
                         </g>
@@ -67,10 +67,10 @@ export default function Header() {
                    <svg xmlns="http://www.w3.org/2000/svg" link="http://www.w3.org/1999/xlink" width="25px"
                         height="25px" viewBox="0 0 28 28" version="1.1">
                         <defs></defs>
-                        <g id="Artboard-3" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <g id="Artboard-3" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
                             <path
                                 d="M21.8072562,4.86440678 C20.9092971,4.30508475 19.9115646,4 18.814059,4 C16.8684807,4 15.1723356,4.96610169 14.0249433,6.49152542 C12.877551,4.96610169 11.1315193,4 9.23582766,4 C8.138322,4 7.14058957,4.30508475 6.24263039,4.86440678 C4.29705215,6.03389831 3,8.27118644 3,10.8644068 C3,11.6271186 3.09977324,12.3389831 3.29931973,13 C4.29705215,18.2881356 13.9750567,25 13.9750567,25 C13.9750567,25 23.6530612,18.3389831 24.7006803,13 C24.9002268,12.3389831 25,11.6271186 25,10.8644068 C25,8.27118644 23.7029478,6.03389831 21.8072562,4.86440678 Z"
-                                id="Wishlist" stroke="#FFFFFF" stroke-width="1.6"></path>
+                                id="Wishlist" stroke="#FFFFFF" strokeWidth="1.6"></path>
                         </g>
                     </svg>
 
@@ -79,8 +79,8 @@ export default function Header() {
                 <li>
                      <svg xmlns="http://www.w3.org/2000/svg" link="http://www.w3.org/1999/xlink" width="25px"
                         height="25px" viewBox="0 0 28 28" version="1.1">
-                        <g id="Artboard-6" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                            <g transform="translate(3.000000, 3.000000)" fill-rule="nonzero">
+                        <g id="Artboard-6" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
+                            <g transform="translate(3.000000, 3.000000)" fillRule="nonzero">
                                 <circle fill="#F0F0F0" cx="11.5" cy="11.5" r="11.5"></circle>
                                 <path
                                     d="M11.5,0 C6.94069922,0 3.00123047,2.65331055 1.14110547,6.50001562 L21.8588496,6.50001562 C19.9987695,2.65331055 16.0592559,0 11.5,0 Z"

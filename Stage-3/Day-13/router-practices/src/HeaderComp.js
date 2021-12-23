@@ -19,7 +19,7 @@ export default function HeaderComp() {
 
         
             <h3>
-              <Link exact to="">Home</Link>
+              <Link to="">Home</Link>
             </h3>
             <h3>
               <Link to="/about">About</Link>

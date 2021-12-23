@@ -7,7 +7,7 @@ function App() {
   return (
   <div className="container-fluid">
     <HookCounter/>
-   {/* <UseEffectComp/> */}
+   <UseEffectComp/>
   </div>
   );
 }

@@ -25,11 +25,13 @@ let modalTitle, modalBody, modalSubmit, editId ;
     }
   };
 
+
   const submitFunction = (event) => {
-    setModalShow(false);
-    console.log(event.target.id);
+   
+   
     event.preventDefault();
     if (event.target.id === "5123") {
+      console.log(">>>>>>>>>>>>>>>>>>>>>",event.target.ControlFirstName.value);
       let addUser = {
         id: `${userData.length + 1}`,
         fName: event.target.ControlFirstName.value,

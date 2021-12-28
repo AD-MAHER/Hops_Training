@@ -1,22 +1,21 @@
 import React, { Component } from 'react'
-import './App.css';
-import Counter from './Component/Counter';
-import { connect } from 'react-redux';
+import "./App.css"
+import CounterComp from './Components/CounterComp';
 
-class App extends Component {
+export default class App extends Component {
   render() {
     return (
-      <div className='App'>
-        <Counter/>
+      <div>
+          {/* <CounterComp/> */}
+          <div className='col'>
+            <div><span>A:</span><span>{this.props.a}</span></div>
+          <button>Update A</button>
+          </div>
+          <div className='col'>
+            <div><span>B:</span><span>{this.props.b}</span></div>
+          <button>Update B</button>
+          </div>
       </div>
     )
   }
 }
-
-
-
-export default connect((state)=>{
-  return {
-    ui:state.ui
-  }
-}) (App);

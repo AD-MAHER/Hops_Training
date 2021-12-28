@@ -1,4 +1,4 @@
-/* body {
+ body {
   text-align: center;
   background-color: #282c34;
 }
@@ -82,7 +82,7 @@ button{
   color:tomato;
   -webkit-text-stroke-width: 0.3px;
   -webkit-text-stroke-color: tomato;
-} */
+} 
 
 
 .col{

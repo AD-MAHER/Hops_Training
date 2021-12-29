@@ -1,0 +1,32 @@
+{
+    "contacts":[
+        {
+            "id" : "1",
+            "name": "Tejas",
+            "email" : "tjpatel@gmail.com"
+
+        },
+        {
+            "id" : "2",
+            "name": "Ajay",
+            "email" : "amd@gmail.com"
+
+        },
+        {
+            "id" : "3",
+            "name": "Sonu",
+            "email" : "sonu@gmail.com"
+
+        },
+        
+        {
+            "id" : "4",
+            "name": "Nayan",
+            "email" : "nyn@gmail.com"
+
+        }
+
+
+    ]
+}
+

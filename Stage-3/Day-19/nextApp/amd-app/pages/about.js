@@ -1,10 +1,9 @@
 import React from 'react'
+import PostComp from '../Component/Posts/PostComp'
 
 const About = () => {
     return (
-        <div>
-            hello world
-        </div>
+       <> <PostComp/></>
     )
 }
 
